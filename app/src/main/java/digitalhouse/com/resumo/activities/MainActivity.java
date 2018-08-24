@@ -50,4 +50,67 @@ public class MainActivity extends AppCompatActivity {
 
         initBookData();
     }
+    private void initBookData() {
+        Book book = new Book("Hello Android", "Ed Burnette");
+        bookList.add(book);
+
+        book = new Book("Beginning Android 3", "Mark Murphy");
+        bookList.add(book);
+
+        book = new Book("Unlocking Android", " W. Frank Ableson");
+        bookList.add(book);
+
+        book = new Book("Android Tablet Development", "Wei Meng Lee");
+        bookList.add(book);
+
+        book = new Book("Android Apps Security", "Sheran Gunasekera");
+        bookList.add(book);
+
+        book = new Book("Android Apps Security", "Sheran Gunasekera");
+        bookList.add(book);
+
+        book = new Book("Android Apps Security", "Sheran Gunasekera");
+        bookList.add(book);
+
+        book = new Book("Android Apps Security", "Sheran Gunasekera");
+        bookList.add(book);
+
+        book = new Book("Android Apps Security", "Sheran Gunasekera");
+        bookList.add(book);
+
+        book = new Book("Android Apps Security", "Sheran Gunasekera");
+        bookList.add(book);
+
+        book = new Book("Android Apps Security", "Sheran Gunasekera");
+        bookList.add(book);
+
+        book = new Book("Android Apps Security", "Sheran Gunasekera");
+        bookList.add(book);
+
+        book = new Book("Android Apps Security", "Sheran Gunasekera");
+        bookList.add(book);
+
+        book = new Book("Android Apps Security", "Sheran Gunasekera");
+        bookList.add(book);
+
+        book = new Book("Android Apps Security", "Sheran Gunasekera");
+        bookList.add(book);
+
+        book = new Book("Android Apps Security", "Sheran Gunasekera");
+        bookList.add(book);
+
+        book = new Book("Android Apps Security", "Sheran Gunasekera");
+        bookList.add(book);
+
+        book = new Book("Android Apps Security", "Sheran Gunasekera");
+        bookList.add(book);
+
+        book = new Book("Android Apps Security", "Sheran Gunasekera");
+        bookList.add(book);
+
+        book = new Book("Android Apps Security", "Sheran Gunasekera");
+        bookList.add(book);
+
+        bookAdapter.notifyDataSetChanged();
+    }
 }
