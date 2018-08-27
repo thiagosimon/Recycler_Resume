@@ -2,6 +2,7 @@ package digitalhouse.com.resumo.network;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClientInstance {
 
@@ -18,13 +19,13 @@ public class RetrofitClientInstance {
 
         if(retrofit == null){
             retrofit = new retrofit2.Retrofit.Builder()
-                    .baseUrl()
-                    .Client()
-                    .addConvertFactory()
-                    .Build();
+                    .baseUrl(BASE_URL)
+                    .client(client)
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .build();
         }
 
-        return null;
+        return retrofit;
 
     }
 
