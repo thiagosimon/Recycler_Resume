@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private List<Book> bookList = new ArrayList<>();
     private RecyclerView recyclerView;
     private BookAdapter bookAdapter;
-    private List<Posts> postsList = new ArrayList<Posts>();
+    private List<Posts> postsList = new ArrayList<>();
     private PostAdapter postAdapter;
     ProgressDialog progressDialog;
 
@@ -72,18 +72,24 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.addOnItemTouchListener(new RecyclerViewTouchListener(getApplicationContext(), recyclerView, new RecycleViewClickListener() {
             @Override
             public void onClick(View view, int position) {
-                Toast.makeText(getApplicationContext(), bookList.get(position).getTitle() + " is clicked!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), postList.get(position).getTitle() + " is clicked!", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onLongClick(View view, int position) {
-                Toast.makeText(getApplicationContext(), bookList.get(position).getTitle() + " is long pressed!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), postList.get(position).getTitle() + " is long pressed!", Toast.LENGTH_SHORT).show();
 
             }
         }));
-    }
 
 
+        postAdapter = new PostAdapter(postsList);
+        RecyclerView.LayoutManager lm = new LinearLayoutManager(MainActivity.this);
+        recyclerView.setLayoutManager(lm);
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        recyclerView.setAdapter(postAdapter);
+
+        }
 /*
         recyclerView = (RecyclerView) findViewById(R.id.recycler_main);
         bookAdapter = new BookAdapter(bookList);
